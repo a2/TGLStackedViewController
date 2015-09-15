@@ -182,7 +182,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @return The item's desired index path. Return proposedDestinationIndexPath if
  *         it is suitable (default); or nil if item should not be moved.
  */
-- (NSIndexPath *)targetIndexPathForMoveFromItemAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath;
+- (nullable NSIndexPath *)targetIndexPathForMoveFromItemAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath;
 
 /** Move item in data source while dragging.
  *
