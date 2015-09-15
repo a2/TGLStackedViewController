@@ -25,8 +25,16 @@
 
 #import <UIKit/UIKit.h>
 
-#import "TGLStackedLayout.h"
-#import "TGLExposedLayout.h"
+//! Project version number for TGLStackedViewController.
+FOUNDATION_EXPORT double TGLStackedViewControllerVersionNumber;
+
+//! Project version string for TGLStackedViewController.
+FOUNDATION_EXPORT const unsigned char TGLStackedViewControllerVersionString[];
+
+#import <TGLStackedViewController/TGLStackedLayout.h>
+#import <TGLStackedViewController/TGLExposedLayout.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface TGLStackedViewController : UICollectionViewController <UIGestureRecognizerDelegate>
 
@@ -140,7 +148,7 @@
  * location to expose it, instead of the current
  * one, or set to nil to collapse all items.
  */
-@property (strong, nonatomic) NSIndexPath *exposedItemIndexPath;
+@property (strong, nonatomic, nullable) NSIndexPath *exposedItemIndexPath;
 
 /** Allow the overlapping parts of unexposed items
  * to be tapped and thus select another item.
@@ -187,3 +195,5 @@
 - (void)moveItemAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -25,7 +25,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "TGLStackedViewController.h"
+#import <TGLStackedViewController/TGLStackedViewController.h>
 
 @interface TGLViewController : TGLStackedViewController
 

@@ -25,6 +25,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef NS_ENUM(NSInteger, TGLExposedLayoutPinningMode) {
 
     TGLExposedLayoutPinningModeNone = 0,    /* Do not pin unexpsed items */
@@ -71,6 +73,10 @@ typedef NS_ENUM(NSInteger, TGLExposedLayoutPinningMode) {
 /** The number of items below the exposed item to be pinned. Default 2 */
 @property (assign, nonatomic) NSUInteger bottomPinningCount;
 
-- (instancetype)initWithExposedItemIndex:(NSInteger)exposedItemIndex;
+- (instancetype)init NS_UNAVAILABLE;
+- (instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
+- (instancetype)initWithExposedItemIndex:(NSInteger)exposedItemIndex NS_DESIGNATED_INITIALIZER;
 
 @end
+
+NS_ASSUME_NONNULL_END

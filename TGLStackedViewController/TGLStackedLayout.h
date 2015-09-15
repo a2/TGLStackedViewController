@@ -25,6 +25,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface TGLStackedLayout : UICollectionViewLayout
 
 /** Margins between collection view and items. Default is UIEdgeInsetsMake(20.0, 0.0, 0.0, 0.0) */
@@ -58,7 +60,7 @@
 @property (assign, nonatomic) CGPoint contentOffset;
 
 /** Index path of item currently being moved, and thus being hidden */
-@property (strong, nonatomic) NSIndexPath *movingIndexPath;
+@property (strong, nonatomic, nullable) NSIndexPath *movingIndexPath;
 
 /** Check if layout needs update for new moving location.
  *
@@ -71,10 +73,12 @@
  *        and update layout for if necessary.
  * @param targetBlock Block being called to retarget proposed destinationIndexPath
  *        computed from movingLocation. The block returns the new location, or
- *        nil if teh item's location should not be updated.
+ *        nil if the item's location should not be updated.
  * @param updateBlock Block being called when movingLocation results in
  *        in a new location for item at -movingIndexPath.
  */
-- (void)invalidateLayoutIfNecessaryWithMovingLocation:(CGPoint)movingLocation targetBlock:(NSIndexPath* (^) (NSIndexPath *sourceIndexPath, NSIndexPath *proposedDestinationIndexPath))targetBlock updateBlock:(void (^) (NSIndexPath *fromIndexPath, NSIndexPath *toIndexPath))updateBlock;
+- (void)invalidateLayoutIfNecessaryWithMovingLocation:(CGPoint)movingLocation targetBlock:(nullable NSIndexPath *(^) (NSIndexPath *sourceIndexPath, NSIndexPath *proposedDestinationIndexPath))targetBlock updateBlock:(void (^) (NSIndexPath *fromIndexPath, NSIndexPath *toIndexPath))updateBlock;
 
 @end
+
+NS_ASSUME_NONNULL_END
