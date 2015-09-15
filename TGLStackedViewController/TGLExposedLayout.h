@@ -73,8 +73,6 @@ typedef NS_ENUM(NSInteger, TGLExposedLayoutPinningMode) {
 /** The number of items below the exposed item to be pinned. Default 2 */
 @property (assign, nonatomic) NSUInteger bottomPinningCount;
 
-- (instancetype)init NS_UNAVAILABLE;
-- (instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
 - (instancetype)initWithExposedItemIndex:(NSInteger)exposedItemIndex NS_DESIGNATED_INITIALIZER;
 
 @end

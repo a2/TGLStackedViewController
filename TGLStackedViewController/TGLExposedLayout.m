@@ -35,6 +35,16 @@
 
 @implementation TGLExposedLayout
 
+- (instancetype)init
+{
+    return [self initWithExposedItemIndex:0];
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    return [self initWithExposedItemIndex:0];
+}
+
 - (instancetype)initWithExposedItemIndex:(NSInteger)exposedItemIndex {
     
     self = [super init];
