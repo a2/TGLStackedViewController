@@ -292,7 +292,7 @@ typedef NS_ENUM(NSInteger, TGLStackedViewControllerScrollDirection) {
                 
                 startCenter = self.movingView.center;
                 
-                UIImageView *movingImageView = [[UIImageView alloc] initWithImage:[self screenshotImageOfItem:movingCell]];
+                UIView *movingImageView = [movingCell snapshotViewAfterScreenUpdates:NO];
                 
                 movingImageView.alpha = 0.0f;
                 
@@ -509,19 +509,6 @@ typedef NS_ENUM(NSInteger, TGLStackedViewControllerScrollDirection) {
 }
 
 #pragma mark - Helpers
-
-- (UIImage *)screenshotImageOfItem:(UICollectionViewCell *)item {
-    
-    UIGraphicsBeginImageContextWithOptions(item.bounds.size, item.isOpaque, 0.0f);
-    
-    [item.layer renderInContext:UIGraphicsGetCurrentContext()];
-    
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    
-    UIGraphicsEndImageContext();
-
-    return image;
-}
 
 - (void)updateLayoutAtMovingLocation:(CGPoint)movingLocation {
     
