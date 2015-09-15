@@ -108,7 +108,7 @@
     }
 }
 
-- (void)setBottomOverlapCount:(NSUInteger)bottomOverlapCount {
+- (void)setBottomOverlapCount:(NSInteger)bottomOverlapCount {
     
     if (bottomOverlapCount != self.bottomOverlapCount) {
         
@@ -151,8 +151,8 @@
     
     NSMutableDictionary *layoutAttributes = [NSMutableDictionary dictionary];
     NSInteger itemCount = [self.collectionView numberOfItemsInSection:0];
-    NSUInteger bottomOverlapCount = self.bottomOverlapCount;
-    NSUInteger bottomPinningCount = MIN(itemCount - self.exposedItemIndex - 1, self.bottomPinningCount);
+    NSInteger bottomOverlapCount = self.bottomOverlapCount;
+    NSInteger bottomPinningCount = MIN(itemCount - self.exposedItemIndex - 1, self.bottomPinningCount);
 
     for (NSInteger item = 0; item < itemCount; item++) {
 

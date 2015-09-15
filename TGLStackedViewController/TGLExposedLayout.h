@@ -62,16 +62,16 @@ typedef NS_ENUM(NSInteger, TGLExposedLayoutPinningMode) {
 @property (assign, nonatomic) CGFloat bottomOverlap;
 
 /** Number of items overlapping below exposed item. Default 1 */
-@property (assign, nonatomic) NSUInteger bottomOverlapCount;
+@property (assign, nonatomic) NSInteger bottomOverlapCount;
 
 /** Layout mode for other than exposed items. Default `TGLExposedLayoutPinningModeNone` */
 @property (assign, nonatomic) TGLExposedLayoutPinningMode pinningMode;
 
 /** The number of items above the exposed item to be pinned. Default 2 */
-@property (assign, nonatomic) NSUInteger topPinningCount;
+@property (assign, nonatomic) NSInteger topPinningCount;
 
 /** The number of items below the exposed item to be pinned. Default 2 */
-@property (assign, nonatomic) NSUInteger bottomPinningCount;
+@property (assign, nonatomic) NSInteger bottomPinningCount;
 
 - (instancetype)initWithExposedItemIndex:(NSInteger)exposedItemIndex NS_DESIGNATED_INITIALIZER;
 

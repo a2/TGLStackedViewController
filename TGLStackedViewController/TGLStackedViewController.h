@@ -90,7 +90,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * Default value is 1
  */
-@property (assign, nonatomic) NSUInteger exposedBottomOverlapCount;
+@property (assign, nonatomic) NSInteger exposedBottomOverlapCount;
 
 /** Layout mode for other than exposed items.
  *
@@ -123,7 +123,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * Default value is 2
  */
-@property (assign, nonatomic) NSUInteger exposedTopPinningCount;
+@property (assign, nonatomic) NSInteger exposedTopPinningCount;
 
 /** The number of items below the exposed item to be pinned.
  *
@@ -134,7 +134,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * Default value is 2
  */
-@property (assign, nonatomic) NSUInteger exposedBottomPinningCount;
+@property (assign, nonatomic) NSInteger exposedBottomPinningCount;
 
 /** Index path of currently exposed item.
  *
